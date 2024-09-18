@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --main-color: #4CAF50;
+    /* Green */
+    --secondary-color: white;
+    --text-color: black;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-color);
+}
+
+.logo {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+.btn-book {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-book:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.header-section {
+    height: 100vh;
+    background: url('images/img3.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.header-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header-content h1 {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ffffff;
+    /* Adjust color as needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.header-content h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    /* Adds spacing between the H2 and the button */
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.btn-enquiry {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.about-section,
+.services-section,
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container,
+.form-container,
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-container img,
+.service-card img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.about-text,
+.service-card,
+.form-text,
+form {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.service-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:
+        #3E8E41;
+}
+
+.required {
+    color: red;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Ensure content is centered with max-width */
+header .header-content,
+.about-section .about-container,
+.services-section .services-container,
+.form-section .form-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .about-container,
+    .services-container,
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-container form,
+    .form-text {
+        width: 100%;
+    }
+
+    .service-card {
+        margin: 10px 0;
+    }
+}
